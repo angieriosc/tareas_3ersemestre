@@ -194,10 +194,7 @@ void Node<T>::levelbylevel(std::stringstream& aux) const {
     while (!nodesQueue.empty()) {
         Node<T>* current = nodesQueue.front();
         nodesQueue.pop();
-        if (aux.tellp() != 1){
-            aux << " ";
-        }
-        aux << current->value; // Imprimir el valor del nodo actual
+        aux << current->value << " "; // Imprimir el valor del nodo actual
 
         // Agregar los nodos hijos a la cola si existen
         if (current->left != nullptr) {
@@ -387,11 +384,8 @@ void BST<T>::ancestorsAux(Node<T>* node, T val, std::stringstream& result) const
 
     if (node->find(val)) {
         if (node->value != val) {
-            if (result.tellp() != 1){
-                result << " ";
-            }
             result << node->value;
-
+            result << " ";
         }
         if (val < node->value) {
             ancestorsAux(node->left, val, result);
