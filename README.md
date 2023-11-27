@@ -7,4 +7,4 @@ Las unicas correciones que implemente fue en el archivo de bst.h en la funcion d
             aux << " ";
         }
 
-si es diferente al primero imprimir espacio antes de imprimir el siguiente valor.
+
